@@ -29,7 +29,7 @@ A shopper logs into the app. The web app does not recognize their address so the
 
 ## How to set up project:
 
-1. First install dependencies by executing: `cd marketplace/client && npm install`
+1. First navigate to client folder and install dependencies by executing: `npm install`
 1. Start ganache-cli by executing: `ganache-cli`
 1. (Optional) Make sure that project compiles by executing: `truffle compile`
 1. (Optional) Make sure that project tests are executed successfully: `truffle test`
