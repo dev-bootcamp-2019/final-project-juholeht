@@ -29,11 +29,13 @@ A shopper logs into the app. The web app does not recognize their address so the
 
 ## How to set up project:
 
-1. First install dependencies by executing: `cd marketplace/client && npm install`
+1. First clone repository to your machine `git clone https://github.com/dev-bootcamp-2019/final-project-juholeht`
 1. Start ganache-cli by executing: `ganache-cli`
+1. Navigate to final-project-juholeht folder
 1. (Optional) Make sure that project compiles by executing: `truffle compile`
 1. (Optional) Make sure that project tests are executed successfully: `truffle test`
 1. Migrate contract to development environment by executing: `truffle migrate`
+1. Install dependencies by executing: `cd client && npm install`
 1. Start local server that serves UI by executing: `npm run start` 
 1. UI is now available in http://localhost:3000 (remember to use Metamask or other dapp browser)
 1. Import mnemonic to metamask (printed in ganache-cli's console) to access admin rights. Contract creator will be always administrator.

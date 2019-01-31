@@ -32,6 +32,14 @@ class App extends Component {
       // Get the contract instance.
       const Contract = truffleContract(Marketplace);
       Contract.setProvider(web3.currentProvider);
+      //dirty hack for web3@1.0.0 support for localhost testrpc, see https://github.com/trufflesuite/truffle-contract/issues/56#issuecomment-331084530
+      if (typeof Contract.currentProvider.sendAsync !== "function") {
+        Contract.currentProvider.sendAsync = function() {
+          return Contract.currentProvider.send.apply(
+            Contract.currentProvider, arguments
+          );
+        };
+      }
       const instance = await Contract.deployed();
 
       // Set web3, accounts, and contract to the state, and then proceed with an
